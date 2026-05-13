@@ -241,6 +241,15 @@
       backdrop-filter: blur(16px);
       overflow: hidden;
       position: relative;
+      min-height: 0;
+    }
+
+    .profile-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0;
     }
 
     .profile-card::after {
@@ -252,40 +261,59 @@
       top: -54px;
       border-radius: 50%;
       background: linear-gradient(135deg, rgba(255,240,168,.82), rgba(123,31,58,.22));
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .profile-card > * {
+      position: relative;
+      z-index: 1;
     }
 
     .avatar {
-      width: 108px;
-      height: 108px;
+      width: 104px;
+      height: 104px;
       border-radius: 50%;
       display: block;
       object-fit: cover;
-      margin-bottom: 20px;
+      object-position: center;
+      margin: 0 0 18px;
       border: 5px solid var(--butter);
       box-shadow: 0 18px 34px rgba(74,16,36,.24);
-      position: relative;
-      z-index: 1;
+      flex: 0 0 auto;
     }
 
     .profile-card h2,
     .course-stat-card h2 {
       margin: 0 0 10px;
       font-size: 1.7rem;
+      line-height: 1.08;
       letter-spacing: -0.05em;
     }
 
     .profile-card p,
     .course-stat-card p { color: var(--muted); line-height: 1.62; margin: 0; }
 
-    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 18px;
+      max-width: 100%;
+    }
     .chip {
+      display: inline-flex;
+      align-items: center;
       padding: 8px 11px;
       border-radius: 999px;
       background: rgba(123, 31, 58, 0.10);
       color: var(--deep-bordeaux);
       font-size: .84rem;
+      line-height: 1.15;
       font-weight: 750;
       border: 1px solid rgba(123, 31, 58, 0.14);
+      white-space: normal;
     }
 
     .mini-stats {
@@ -655,7 +683,7 @@
 
       <aside class="side-stack" aria-label="Profile highlights">
         <div class="profile-card">
-          <img class="avatar" src="https://github.com/etiennelwamba/graph-ai-portfolio/blob/main/aa2e34d6-5980-406f-9342-e305d6b0e696.jpeg?raw=true" alt="Portrait of Etienne Lwamba
+          <img class="avatar" src="https://github.com/etiennelwamba/graph-ai-portfolio/blob/main/aa2e34d6-5980-406f-9342-e305d6b0e696.jpeg?raw=true" alt="Portrait of Etienne Lwamba" />
           <h2>Evaluation specialist & research lead</h2>
           <p>
             Based in the United Kingdom, I work on evidence synthesis, impact evaluation, systematic reviews and evidence gap maps for social and economic interventions in low- and middle-income countries.
