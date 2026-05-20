@@ -582,7 +582,8 @@
 
     .submission-card p { color: var(--muted); line-height: 1.55; margin: 0 0 18px; }
 
-    .placeholder {
+    .placeholder,
+    .project-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -593,13 +594,27 @@
       z-index: 1;
     }
 
-    .placeholder::before {
+    .project-link {
+      text-decoration: none;
+      border-bottom: 1px solid rgba(123, 31, 58, 0.34);
+      padding-bottom: 2px;
+      transition: color 180ms ease, border-color 180ms ease;
+    }
+
+    .project-link:hover {
+      color: var(--deep-bordeaux);
+      border-color: var(--deep-bordeaux);
+    }
+
+    .placeholder::before,
+    .project-link::before {
       content: "";
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: var(--butter);
       border: 1px solid rgba(74,16,36,.22);
+      flex: 0 0 8px;
     }
 
     .footer {
@@ -822,7 +837,7 @@
           <p class="eyebrow">My weekly submissions</p>
           <h2 class="section-title">A living record of experiments, artefacts and reflections.</h2>
         </div>
-        <p class="section-note">Links will be added as each weekly submission is completed. For now, these cards mark the portfolio structure.</p>
+        <p class="section-note">Links will be added as each weekly submission is completed. These cards document the portfolio structure and completed project artefacts.</p>
       </div>
 
       <div class="submissions-grid">
@@ -834,9 +849,9 @@
         </article>
         <article class="submission-card">
           <span class="week">Week 2</span>
-          <h3>Data analysis workflow</h3>
-          <p>AI-assisted analysis, visualisation and transparent reporting.</p>
-          <span class="placeholder">Link coming soon</span>
+          <h3>Workshop 2: Automated Data Analysis</h3>
+          <p>AI-assisted analysis of Gapminder data exploring relationships between two global indicators.</p>
+          <a class="project-link" href="https://github.com/etiennelwamba/graph-ai-portfolio/blob/main/Freedom_and_Income_Report_2020.docx" target="_blank" rel="noopener noreferrer">View report</a>
         </article>
         <article class="submission-card">
           <span class="week">Week 3</span>
