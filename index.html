@@ -619,6 +619,25 @@
       flex: 0 0 8px;
     }
 
+    .consultation-form-wrap {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(255, 253, 242, 0.82);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 44px rgba(74, 16, 36, 0.11);
+    }
+
+    .consultation-form-wrap iframe {
+      display: block;
+      width: 100%;
+      min-height: 856px;
+      border: 0;
+      background: var(--white);
+    }
+
     .footer {
       display: flex;
       justify-content: space-between;
@@ -665,6 +684,7 @@
       .feature-list,
       .mini-stats { grid-template-columns: 1fr; }
       .section-heading { align-items: flex-start; flex-direction: column; }
+      .consultation-form-wrap iframe { min-height: 900px; }
       .footer { align-items: flex-start; flex-direction: column; }
       .social-links { justify-content: flex-start; }
     }
@@ -682,6 +702,7 @@
         <a href="#about">About me</a>
         <a href="#course">Course</a>
         <a href="#submissions">Submissions</a>
+        <a href="#consultation">Consultation</a>
       </div>
     </nav>
 
@@ -695,6 +716,7 @@
         <div class="hero-actions">
           <a class="button primary" href="#submissions">View weekly work</a>
           <a class="button secondary" href="#course">Explore the course</a>
+          <a class="button secondary" href="#consultation">Contact for consultation</a>
         </div>
       </div>
 
@@ -894,6 +916,20 @@
       </div>
     </section>
 
+    <section id="consultation">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Consultation</p>
+          <h2 class="section-title">Contact for Consultation</h2>
+        </div>
+        <p class="section-note">Use the form below to get in touch about consulting, research support, evidence synthesis, evaluation or AI-enabled workflows.</p>
+      </div>
+
+      <div class="consultation-form-wrap">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfiyGTK_boOfEO_iqV87xQsbkkg6Zi43XY8He0ZGo1zKjOt_A/viewform?embedded=true" width="640" height="856" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </section>
+
     <footer class="footer">
       <div>
         <strong>Etienne Lwamba</strong><br />
@@ -903,6 +939,7 @@
         <a href="#about">Profile</a>
         <a href="#course">Course</a>
         <a href="#submissions">Submissions</a>
+        <a href="#consultation">Consultation</a>
       </div>
     </footer>
   </main>
